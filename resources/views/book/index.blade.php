@@ -9,6 +9,7 @@
 
 <body>
     <h1>Index</h1>
+    <a href="/create">Create new book info</a>
     <ul>
         @foreach ($books as $book)
             <li>{{$book->title}}, {{$book->release_date}}</li>
