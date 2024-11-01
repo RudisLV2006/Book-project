@@ -12,6 +12,7 @@
         <h1>{{$book->title}}</h1>
         <p>Book released at {{$book->release_date}}</p>
     </div>
+    <a href="/book">Return back</a>
 </body>
 
 </html>
