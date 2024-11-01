@@ -7,8 +7,9 @@ use App\Models\Book;
 
 class BookController extends Controller
 {
-    public function index(Book $book)
+    public function index()
     {
-        return 'index';
+        $books = Book::all();
+        return view('book.index', ['books' => $books]);
     }
 }
