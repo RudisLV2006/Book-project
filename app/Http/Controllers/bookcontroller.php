@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Book;
 
-class bookcontroller extends Controller
+class BookController extends Controller
 {
-    //
+    public function index(Book $book)
+    {
+        return 'index';
+    }
 }
