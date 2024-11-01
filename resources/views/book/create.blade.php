@@ -9,6 +9,7 @@
 
 <body>
     <form action="/store" method="post">
+        @csrf
         <label for="title">Enter book title:</label>
         <input type="text" name="title">
         <br>
