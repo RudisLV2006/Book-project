@@ -12,4 +12,4 @@ Route::get('/book/{book}', [BookController::class, 'show']);
 Route::get('/edit/{book}', [BookController::class, 'edit']);
 Route::post('/store', [BookController::class, 'store']);
 Route::put('/book/{book}', [BookController::class, 'update']);
-//Route::delete('/book/{book}', [BookController::class, 'delete']);
+Route::delete('/book/{book}', [BookController::class, 'delete']);

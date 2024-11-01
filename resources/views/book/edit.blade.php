@@ -9,9 +9,9 @@
 
 <body>
     <a href="/book">Return</a>
-    <form action="/book/{{$book->id}}" method="post">
+    <form action="/book/{{$book->id}}" method="POST">
         @csrf
-        @method('PUT')
+        @METHOD('PUT')
         <div style="text-align:center">
             <label for="title">Book title:</label>
             <input type="text" name="title">

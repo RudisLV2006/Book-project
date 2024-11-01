@@ -39,14 +39,10 @@ class BookController extends Controller
         // return view('book.index');
         return redirect('/book/' . $book->id);
     }
-    
-    /*
-        public function delete(Book $book)
+    public function delete(Book $book)
     {
         $book->delete();
 
         return redirect('/book');
     }
-    */
-
 }

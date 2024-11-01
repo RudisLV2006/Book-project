@@ -15,7 +15,11 @@
             <li>{{$book->title}}, {{$book->release_date}}</li>
             <a href="/book/{{$book->id}}">Show</a>
             <a href="/edit/{{$book->id}}">Edit</a>
-            
+            <form action="/book/{{$book->id}}" method="POST">
+                @csrf
+                @method('DELETE')
+                <button>Delete</button>
+            </form>
         @endforeach
     </ul>
 
