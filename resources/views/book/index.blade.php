@@ -14,6 +14,8 @@
         @foreach ($books as $book)
             <li>{{$book->title}}, {{$book->release_date}}</li>
             <a href="/book/{{$book->id}}">Show</a>
+            <a href="/edit/{{$book->id}}">Edit</a>
+            
         @endforeach
     </ul>
 

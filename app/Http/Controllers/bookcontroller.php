@@ -20,13 +20,33 @@ class BookController extends Controller
     {
         return view('book.show', ['book' => $book]);
     }
+    public function edit(Book $book)
+    {
+        return view('book.edit', ['book' => $book]);
+    }
+    public function update(Request $request, Book $book)
+    {
+        $data = ['title' => $request->title, 'release_date' => $request->date];
+        $book->update($data);
+        return redirect('/book/' . $book->id);
+    }
     public function store(Request $request)
     {
         \Log::debug($request);
 
         $data = ['title' => $request->title, 'release_date' => $request->date];
-        Book::create($data);
+        $book = Book::create($data);
         // return view('book.index');
+        return redirect('/book/' . $book->id);
+    }
+    
+    /*
+        public function delete(Book $book)
+    {
+        $book->delete();
+
         return redirect('/book');
     }
+    */
+
 }
