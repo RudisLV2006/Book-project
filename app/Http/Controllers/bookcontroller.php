@@ -12,4 +12,12 @@ class BookController extends Controller
         $books = Book::all();
         return view('book.index', ['books' => $books]);
     }
+    public function create()
+    {
+        return view('book.create');
+    }
+    public function store(Request $request)
+    {
+        $data = [$request]
+    }
 }
