@@ -7,3 +7,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/book', [BookController::class, 'index']);
+Route::get('/create', [BookController::class, 'create']);
+Route::post('/{id}/store', [BookController::class, 'store']);
