@@ -13,6 +13,7 @@
     <ul>
         @foreach ($books as $book)
             <li>{{$book->title}}, {{$book->release_date}}</li>
+            <a href="/book/{{$book->id}}">Show</a>
         @endforeach
     </ul>
 
