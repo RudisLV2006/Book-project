@@ -16,8 +16,17 @@ class BookController extends Controller
     {
         return view('book.create');
     }
+    public function show(Book $book)
+    {
+        return view('book.show', ['book' => $book]);
+    }
     public function store(Request $request)
     {
-        $data = [$request]
+        \Log::debug($request);
+
+        $data = ['title' => $request->title, 'release_date' => $request->date];
+        Book::create($data);
+        // return view('book.index');
+        return redirect('/book');
     }
 }

@@ -8,4 +8,5 @@ Route::get('/', function () {
 });
 Route::get('/book', [BookController::class, 'index']);
 Route::get('/create', [BookController::class, 'create']);
+Route::get('/book/{book}', [BookController::class, 'show']);
 Route::post('/store', [BookController::class, 'store']);
